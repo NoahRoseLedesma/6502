@@ -14,7 +14,8 @@ uint8_t emulator_memget( emulator* self, uint16_t address )
     void printProcessorStatus( emulator* self )
     {
         printf("Accumulator: ");
-        printf("%#02x\n", self->accumulator);
+        printf("%#02x BCD: ", self->accumulator);
+        printf("%d\n", self->accumulator);
         printf("X: ");
         printf("%#02x ", self->X);
         printf("Y: ");

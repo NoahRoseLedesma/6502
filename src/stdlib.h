@@ -34,4 +34,11 @@ static inline bool get_flag(emulator *emu, uint8_t flag_mask )
     return (emu->processor_status & flag_mask) > 0;
 }
 
+// Returns the value of a byte interpreted as a binary coded decimal
+static inline uint8_t byte_as_bcd( uint8_t byte )
+{
+    // Multiply the high nibble by ten and add it to the low nibble.
+    return 10 * ( byte >> 4 ) + (0x0F & byte);
+}
+
 #endif

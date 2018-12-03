@@ -10,6 +10,12 @@ int main( int argc, char* argv[] )
     initilize_emulator( &myEmulator );
     printProcessorStatus( &myEmulator );
 
+    sed( &myEmulator );
+    lda( &myEmulator, 0x10 );
+    adc( &myEmulator, 0x45 );
+    printf("\n");
+    printProcessorStatus( &myEmulator );
+
     // clc( &myEmulator );
     // lda( &myEmulator, 0x01 );
     // adc( &myEmulator, 0x01 );

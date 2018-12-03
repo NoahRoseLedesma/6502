@@ -50,7 +50,7 @@ void bvs( emulator* self, uint16_t relative_address );
 void clc( emulator* self );
 
 // Clear decimal mode
-void cdd( emulator* self );
+void cld( emulator* self );
 
 // Clear interrupt disable bit
 void cli( emulator* self );
